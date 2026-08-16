@@ -1,0 +1,9 @@
+{
+  "name": "ed-coaching-watch",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@block65/webcrypto-web-push": "^1.0.2",
+    "wrangler": "^4.30.0"
+  }
+}
