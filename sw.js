@@ -1,0 +1,2 @@
+self.addEventListener('push',e=>{let d={title:'ED Coaching Watch',body:'Status geändert',url:'https://www.coachingbyed.de/jetzt-buchen/'};try{if(e.data)d={...d,...JSON.parse(e.data.text())}}catch{}e.waitUntil(self.registration.showNotification(d.title,{body:d.body,icon:'/icon-192.png',badge:'/icon-192.png',tag:d.tag||'ed-watch',data:{url:d.url}}))});
+self.addEventListener('notificationclick',e=>{e.notification.close();e.waitUntil(clients.openWindow(e.notification.data?.url||'/'))});
